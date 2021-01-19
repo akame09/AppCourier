@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
         if (codigo.equals("") || password.equals("")){
             ValidacionIniciarSesion();
         }else {
-            db.collection("Usuario").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+            db.collection("usuarios").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                 @Override
                 public void onComplete(@NonNull Task<QuerySnapshot> task) {
                     if (task.isSuccessful()){
